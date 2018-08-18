@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+    <!-- 网络慢时，{{name}}会直接显示在浏览器中，体验差 -->
+    <!-- v-text和v-html等待有值时才渲染到浏览器中 -->
+    <!-- 区别：v-html会识别字符串中的html标签，v-text原样输出 -->
+    <div id="app">
+       {{name}}
+        <div v-text="name"></div>
+        <div v-html="name"></div>
+    </div>
+</body>
+<script src="../js/vue2517.js"></script>
+<script>
+    var vm = new Vue({
+       el: "#app",
+       data: {
+           name:'<h1>vue初体验<h1>'
+       }
+    });
+</script>
+</html>

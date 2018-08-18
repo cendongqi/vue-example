@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/vue2517.js"></script>
+</head>
+<body>
+    <!-- 需求：点击按钮，改变name的值 -->
+    <div id="app">
+        {{name}}
+        <button v-on:click="change">改变值</button>
+    </div>
+</body>
+
+<script>
+    var vm = new Vue({
+       el: "#app",
+       data: {
+           name:"vue初体验"
+       },
+        methods: {
+           change: function () {
+               this.name += 1
+           }
+        }
+    });
+</script>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+    <div id="app">
+        <!-- 拼接字符串 -->
+        {{name + 1}}
+        <!-- 三元运算符 -->
+        {{name == 'wo' ? true:false}}
+        <!-- 调用函数 -->
+        {{ if1(name) }}
+    </div>
+</body>
+<script src="../js/vue2517.js"></script>
+<script>
+    var vm = new Vue({
+       el: "#app",
+       data: {
+           name:"vue初体验"
+       },
+        methods: {
+           if1: function (str) {
+               return str == 'wo'
+           }
+        }
+    });
+</script>
+</html>
